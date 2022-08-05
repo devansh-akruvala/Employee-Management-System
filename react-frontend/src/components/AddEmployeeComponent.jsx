@@ -15,7 +15,6 @@ const saveorUpdateEmployee = (e) =>{
     e.preventDefault();
 
     const employee={firstName,lastName,emailId}
-    navigate("/employees")
     if(id){
         EmployeeService.updateEmployee(id,employee).then((res)=>{
             navigate('/employees')

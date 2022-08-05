@@ -56,7 +56,7 @@ public class EmployeeController {
 	public ResponseEntity<Employee> updateEmployee(@PathVariable long id,@RequestBody Employee employee) {
 		Employee updateEmployee = employeeRepository.findById(id).orElseThrow(() -> 
 		new ResourceNotFoundException("employee not found"));
-		System.out.println(employee);
+//		System.out.println(employee);
 		
 		updateEmployee.setFirstName(employee.getFirstName());
 		updateEmployee.setLastName(employee.getLastName());
